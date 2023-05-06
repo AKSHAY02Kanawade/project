@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CUSTOMER REGISTRATION FORM</title>
+  </head>
+  <body>
+
+    <div class="container mt = 5 shadow-lg p-5" style="width: 45%">
+      <h2 class="text-dark, text-center">REGISTRATION FORM</h2>
+        
+    <form action="/registerCustomer" method="POST">
+        <div class="mb-3">
+            <label for="exampleInputManagerName" class="form-label">Relationship Manager Name</label>
+            <input type="text" name="Mname" class="form-control" id="exampleInputManagerName" placeholder="Manager Name" autocomplete="off" >
+          
+          </div>
+
+          <div class="col-12">
+            <label for="inputName" class="form-label">Customer Name</label>
+            <input type="text" name="name" class="form-control" id="inputName" placeholder="Enter Full Name" autocomplete="off" >
+          </div>
+          
+
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" name="address" class="form-control" id="inputAddress" placeholder="House No,Colony name" autocomplete="off">
+          </div>
+
+           <div class="col-md-5">
+            <label for="inputState" class="form-label">State</label>
+            <select name="state" id="inputState" class="form-select">
+              <option selected>Choose...</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                  <option value="Assam">Assam</option>
+                  <option value="Bihar">Bihar</option>
+                  <option value="Chhattisgarh">Chhattisgarh</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Gujarat">Gujarat</option>
+                  <option value="Haryana">Haryana</option>
+                  <option value="Himachal Pradesh">Himachal Pradesh</option>
+                  <option value="Jharkhand">Jharkhand</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Madhya Pradesh">Madhya Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Manipur">Manipur</option>
+                  <option value="Meghalaya">Meghalaya</option>
+                  <option value="Mizoram">Mizoram</option>
+                  <option value="Nagaland">Nagaland</option>
+                  <option value="Odisha">Odisha</option>
+                  <option value="Punjab">Punjab</option>
+                  <option value="Rajasthan">Rajasthan</option>
+                  <option value="Sikkim">Sikkim</option>
+                  <option value="Tamil Nadu">Tamil Nadu</option>
+                  <option value="Telangana">Telangana</option>
+                  <option value="Tripura">Tripura</option>
+                  <option value="Uttar Pradesh">Uttar Pradesh</option>
+                  <option value="Uttarakhand">Uttarakhand</option>
+                  <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+
+          <div class="col-10">
+            <label for="pan-field" class="form-label">PAN Card Details</label>
+            <input type="text" name="panCard" class ="form-control" id="pan-field" name="pan" placeholder="Enter your PAN card number" autocomplete="off" >
+          </div>
+          
+          
+          <div class="col-10">
+            <label for="aadhaar-field" class="form-label">Aadhaar Card Number</label>
+            <input type="text" name="adharCard" class="form-control" id="aadhaar-field" name="aadhaar" placeholder="Enter your Aadhaar card number"  autocomplete="off" >
+          </div>
+          
+          <div class="col-md-5">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" name="dob" class="form-control"id="dob" name="dob"  autocomplete="off" >
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ex.abc@gmail.com"  autocomplete="off" >
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="col-md-5">
+            <label for="phone" class="form-label">Phone Number</label>
+            <select id="country-code" name="countrycode">
+              <option value="+91">India (+91)</option>
+              <option value="+1">USA (+1)</option>
+              <option value="+44">UK (+44)</option>
+            </select>
+            <input type="tel" id="phone" name="phone" class="form-control" name="phone"  autocomplete="off" >
+        </div>
+
+
+        <div class="col-10">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1"  autocomplete="off" >
+          <div id="exampleInputPassword1" class="form-text">Must contain alphaNumeric Values and special character
+        </div>
+
+         <div class="col-10">
+          <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+          <input type="password" name="cpassword" class="form-control" id="exampleInputPassword2"  autocomplete="off" >
+          <div id="exampleInputPassword1" class="form-text">Should be same as above password
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" name="check" class="form-check-input" id="exampleCheck1" autocomplete="off">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <button type="reset" class="btn btn-primary">Cancle</button>
+         {{!-- <button type="submit" class="btn btn-primary" onclick="hello()">Next</button> --}}
+         <button type="submit" class="btn btn-secondary" onclick="fetch('/productSelection').then(() => window.location = '/productSelection')">Next</button>
+
+      
+   
+      </form>
+    </div>
+
+    <script>
+      function hello()
+      {
+        console.log("hello")
+      }
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
